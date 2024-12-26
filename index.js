@@ -33,7 +33,67 @@ const pupil = {
 function findBestEmployee(employees) {
     let max = 0;
     let bestEmployee ;
-    
+    for(const key in employees){
+        if(employees[key] > max){
+            max = employees[key];
+            bestEmployee = key;
+        }
+        // console.log(employees[key]);
+        // console.log(employees[key]);
+        // console.log(employees[key] > max);
+    }
+    return(bestEmployee);
 }
 
-findBestEmployee(pupil);
+console.log(findBestEmployee(pupil));
+//4
+const salary = {
+    stas:  39657,
+    andriy:39567,
+    ostap: 36787,
+    kiril: 39458
+}
+
+function countTotalSalary(employees) {
+    let max = 0;
+    for(const key in employees){
+        max += employees[key];
+    }
+    return(max);
+}
+
+console.log(countTotalSalary(salary));
+//5
+const users = [
+    { name: 'Mango', age: 20 },
+    { name: 'Poli', age: 25 },
+    { name: 'Ajax', age: 30 }
+  ];
+  
+function getAllPropValues(arr, prop) {
+    let names = [];
+    for(const key of arr){
+        names.push(key[prop]);
+    }
+    return(names);
+}
+
+console.log(getAllPropValues(users, "name"));
+//6
+const frut = [
+    { name: 'Mango', cost: 200, number: 5},
+    { name: 'Apple', cost: 250, number: 15},
+    { name: 'Banana', cost: 300, number: 9 }
+  ];
+
+function calculateTotalPrice(allProdcuts, productName) {
+for(const key of allProdcuts){
+    if(key["name"] == productName){
+        console.log(`${productName} коштують ${key["cost"] * key["number"]}`);
+
+    }
+}
+}
+calculateTotalPrice(frut, "Mango");
+calculateTotalPrice(frut, "Apple");
+calculateTotalPrice(frut, "Banana");
