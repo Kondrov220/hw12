@@ -4,6 +4,8 @@ const user = {
     premium: true,
 }
 
+const {hobby, premium} = user;
+
 user.mood = "happy";
 user.hobby = "skydiving";
 user.premium = false;
@@ -30,6 +32,8 @@ const pupil = {
     kiril:11
 }
 
+const {stas, andriy, ostap, kiril} = pupil;
+
 function findBestEmployee(employees) {
     let max = 0;
     let bestEmployee ;
@@ -48,11 +52,14 @@ function findBestEmployee(employees) {
 console.log(findBestEmployee(pupil));
 //4
 const salary = {
-    stas:  39657,
-    andriy:39567,
-    ostap: 36787,
-    kiril: 39458
+    genya:  39657,
+    igor:39567,
+    sasha: 36787,
+    pasha: 39458
 }
+
+const {genya, igor, sasha, pasha} = salary;
+
 
 function countTotalSalary(employees) {
     let max = 0;
